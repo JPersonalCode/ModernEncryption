@@ -19,3 +19,10 @@ def decrypt_text(key, iv, ct):
 
 key = get_random_bytes(16)  # 16 bytes key for AES-128
 text = input("Enter text to encrypt: ")
+
+iv, ciphertext = encrypt_text(key, text)
+print("Encrypted:", ciphertext)
+
+plaintext = decrypt_text(key, iv, ciphertext)
+print("Decrypted:", plaintext)
+
